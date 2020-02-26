@@ -7,11 +7,14 @@ This client is a simple implementation written in Python for [appium-uiautomator
 Before using this driver, you should build, install and run [appium-uiautomator2-server](https://github.com/appium/appium-uiautomator2-server) at first.
 
 - Building appium-uiautomator2-server project using below commands
-`./gradlew clean assembleServerDebug assembleServerDebugAndroidTest`
+
+  `./gradlew clean assembleServerDebug assembleServerDebugAndroidTest`
 - Installing both src and test apks to the device and execute the instrumentation tests.
-` adb shell am instrument -w io.appium.uiautomator2.server.test/android.support.test.runner.AndroidJUnitRunner`
+
+  ` adb shell am instrument -w io.appium.uiautomator2.server.test/android.support.test.runner.AndroidJUnitRunner`
 - Forward tcp port 6790 to local
-` adb forward tcp:6790 tcp:6790`
+
+  ` adb forward tcp:6790 tcp:6790`
 
 Now it is ready to control the device, below are examples
 ```python
